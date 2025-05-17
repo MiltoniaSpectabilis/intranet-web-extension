@@ -7,14 +7,14 @@ reloadOnUpdate("pages/content/style.scss");
 console.log("background loaded");
 
 function injectContentScript() {
-	chrome.tabs.query({ url: "https://intranet.alxswe.com/*" }, function (tabs) {
-		tabs.forEach(function (tab) {
-			chrome.scripting.executeScript({
-				target: { tabId: tab.id },
-				files: ["src/pages/content/index.js"],
-			});
-		});
-	});
+  chrome.tabs.query({ url: "https://savanna.alxafrica.com/*" }, function(tabs) {
+    tabs.forEach(function(tab) {
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["src/pages/content/index.js"],
+      });
+    });
+  });
 }
 
 // Inject the content-script when the extension is installed or enabled
